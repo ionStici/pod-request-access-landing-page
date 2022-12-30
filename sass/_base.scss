@@ -48,7 +48,11 @@ select {
         height: 667px;
         margin: revert;
         background-color: revert;
-        background-image: url(./assets/mobile/image-host.jpg);
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.75)
+            ),
+            url(./assets/mobile/image-host.jpg);
         background-position: center;
         background-size: cover;
     }

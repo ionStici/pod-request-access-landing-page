@@ -48,7 +48,7 @@ select {
     height: 667px;
     margin: revert;
     background-color: revert;
-    background-image: url(./assets/mobile/image-host.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./assets/mobile/image-host.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -115,6 +115,8 @@ select {
   left: 165px;
   bottom: 130px;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (max-width: 65em) {
   .main {
@@ -148,7 +150,11 @@ select {
 }
 @media only screen and (max-width: 36.25em) {
   .main {
+    position: revert;
     background-color: transparent;
+    padding-top: 0;
+    text-align: center;
+    height: 398px;
   }
 }
 
@@ -172,6 +178,14 @@ select {
     margin-bottom: 31px;
   }
 }
+@media only screen and (max-width: 36.25em) {
+  .h1 {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 16px;
+    order: 1;
+  }
+}
 
 .p {
   color: #c2cbe5;
@@ -186,12 +200,37 @@ select {
     padding-right: 190px;
   }
 }
+@media only screen and (max-width: 36.25em) {
+  .p {
+    padding-right: revert;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 33px;
+    order: 2;
+  }
+}
 
 .form {
   position: relative;
   width: 425px;
   height: 56px;
   margin-bottom: 64px;
+}
+@media only screen and (max-width: 36.25em) {
+  .form {
+    order: 4;
+    width: 327px;
+    height: revert;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .form {
+    width: 100%;
+  }
 }
 .form__input {
   width: 100%;
@@ -213,13 +252,19 @@ select {
   outline: none;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
+@media only screen and (max-width: 36.25em) {
+  .form__input {
+    margin-bottom: 16px;
+    height: 46px;
+  }
+}
 .form__btn {
   width: 162px;
   height: 46px;
   border-radius: 50px;
   border: none;
   background-color: #54e6af;
-  color: 121725;
+  color: #121725;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -236,6 +281,17 @@ select {
 .form__btn:active {
   transform: translateY(-50%) scale(0.95);
 }
+@media only screen and (max-width: 36.25em) {
+  .form__btn {
+    width: 100%;
+    height: 46px;
+    transform: revert;
+    position: revert;
+  }
+  .form__btn:active {
+    transform: scale(0.95);
+  }
+}
 .form__message {
   margin-top: 8px;
   margin-left: 32px;
@@ -245,6 +301,11 @@ select {
   color: #fb3e3e;
   opacity: 0;
 }
+@media only screen and (max-width: 36.25em) {
+  .form__message {
+    margin: 10px 0 0 0;
+  }
+}
 
 .seen {
   width: 536px;
@@ -253,6 +314,28 @@ select {
   justify-content: space-between;
   align-items: center;
   opacity: 0.7;
+}
+@media only screen and (max-width: 36.25em) {
+  .seen {
+    order: 3;
+    width: 315px;
+    height: 17px;
+    margin: 0 auto 48px auto;
+  }
+  .seen__icon {
+    height: 17px;
+  }
+  .seen__icon--google {
+    height: 11px;
+  }
+  .seen__icon--pocket {
+    height: 15px;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .seen {
+    width: 100%;
+  }
 }
 
 .header {
@@ -267,8 +350,23 @@ select {
     left: 39px;
   }
 }
+@media only screen and (max-width: 36.25em) {
+  .header {
+    position: revert;
+    top: revert;
+    left: revert;
+    margin: 0 auto;
+    padding-top: 62px;
+    padding-bottom: 57px;
+  }
+}
 .header__logo {
   display: block;
+}
+@media only screen and (max-width: 36.25em) {
+  .header__logo {
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

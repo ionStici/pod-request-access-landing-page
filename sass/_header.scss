@@ -10,7 +10,20 @@
         left: 39px;
     }
 
+    @media only screen and (max-width: 36.25em) {
+        position: revert;
+        top: revert;
+        left: revert;
+        margin: 0 auto;
+        padding-top: 62px;
+        padding-bottom: 57px;
+    }
+
     &__logo {
         display: block;
+
+        @media only screen and (max-width: 36.25em) {
+            margin: 0 auto;
+        }
     }
 }

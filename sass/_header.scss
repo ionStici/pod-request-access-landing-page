@@ -1,0 +1,11 @@
+.header {
+    margin-top: -28px;
+    margin-bottom: 103px;
+
+    position: absolute;
+    z-index: 3;
+
+    &__logo {
+        display: block;
+    }
+}

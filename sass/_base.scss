@@ -14,11 +14,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     background-color: #121725;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -3;
 }
 
 input,
@@ -28,6 +23,8 @@ select {
     font: inherit;
 }
 
+//
+
 .bg-pattern,
 .bg-img-tablet,
 .bg-img-desktop {
@@ -35,20 +32,29 @@ select {
 }
 
 .wrapper {
-    width: 1440px;
+    max-width: 1440px;
     height: 900px;
     margin: 0 auto;
-    position: relative;
     padding: 130px 0 130px 165px;
     background-color: #121725;
-    z-index: -2;
+    position: relative;
 }
 
 .bg-img-desktop {
     display: block;
     position: absolute;
     right: 0;
-    z-index: -1;
+    z-index: 1;
+
+    // 888/16=55.5
+    @media only screen and (max-width: 55.5em) {
+        width: 100%;
+    }
+
+    // 768/16=48
+    @media only screen and (max-width: 48em) {
+        display: none;
+    }
 }
 
 .bg-pattern {
@@ -56,14 +62,5 @@ select {
     position: absolute;
     right: 0;
     bottom: 77.5px;
-    z-index: 1;
-}
-
-.header {
-    margin-top: -28px;
-    margin-bottom: 103px;
-
-    &__logo {
-        display: block;
-    }
+    z-index: 2;
 }

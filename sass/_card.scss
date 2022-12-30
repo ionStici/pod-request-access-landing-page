@@ -2,10 +2,19 @@
     width: 723px;
     height: 509px;
     background-color: #121725;
-    z-index: 2;
     padding: 88px 58px 0 0;
-
     color: #fff;
+
+    position: absolute;
+    left: 165px;
+    bottom: 130px;
+    z-index: 3;
+
+    // 1040/16=65
+    @media only screen and (max-width: 65em) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .h1 {

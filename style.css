@@ -14,11 +14,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   background-color: #121725;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -3;
 }
 
 input,
@@ -35,20 +30,29 @@ select {
 }
 
 .wrapper {
-  width: 1440px;
+  max-width: 1440px;
   height: 900px;
   margin: 0 auto;
-  position: relative;
   padding: 130px 0 130px 165px;
   background-color: #121725;
-  z-index: -2;
+  position: relative;
 }
 
 .bg-img-desktop {
   display: block;
   position: absolute;
   right: 0;
-  z-index: -1;
+  z-index: 1;
+}
+@media only screen and (max-width: 55.5em) {
+  .bg-img-desktop {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .bg-img-desktop {
+    display: none;
+  }
 }
 
 .bg-pattern {
@@ -56,24 +60,25 @@ select {
   position: absolute;
   right: 0;
   bottom: 77.5px;
-  z-index: 1;
-}
-
-.header {
-  margin-top: -28px;
-  margin-bottom: 103px;
-}
-.header__logo {
-  display: block;
+  z-index: 2;
 }
 
 .main {
   width: 723px;
   height: 509px;
   background-color: #121725;
-  z-index: 2;
   padding: 88px 58px 0 0;
   color: #fff;
+  position: absolute;
+  left: 165px;
+  bottom: 130px;
+  z-index: 3;
+}
+@media only screen and (max-width: 65em) {
+  .main {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .h1 {
@@ -165,6 +170,16 @@ select {
   justify-content: space-between;
   align-items: center;
   opacity: 0.7;
+}
+
+.header {
+  margin-top: -28px;
+  margin-bottom: 103px;
+  position: absolute;
+  z-index: 3;
+}
+.header__logo {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

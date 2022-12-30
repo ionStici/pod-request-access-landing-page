@@ -37,6 +37,22 @@ select {
   background-color: #121725;
   position: relative;
 }
+@media only screen and (max-width: 48em) {
+  .wrapper {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 36.25em) {
+  .wrapper {
+    width: 100%;
+    height: 667px;
+    margin: revert;
+    background-color: revert;
+    background-image: url(./assets/mobile/image-host.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
 
 .bg-img-desktop {
   display: block;
@@ -55,12 +71,38 @@ select {
   }
 }
 
+@media only screen and (max-width: 48em) {
+  .bg-img-tablet {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 36.25em) {
+  .bg-img-tablet {
+    display: none;
+  }
+}
+
 .bg-pattern {
   display: block;
   position: absolute;
   right: 0;
   bottom: 77.5px;
   z-index: 2;
+}
+@media only screen and (max-width: 48em) {
+  .bg-pattern {
+    top: revert;
+    left: 30px;
+    bottom: -104px;
+  }
+}
+@media only screen and (max-width: 36.25em) {
+  .bg-pattern {
+    display: none;
+  }
 }
 
 .main {
@@ -80,6 +122,35 @@ select {
     transform: translateX(-50%);
   }
 }
+@media only screen and (max-width: 48em) {
+  .main {
+    width: 635px;
+    height: 509px;
+    transform: revert;
+    left: 39px;
+    top: 258px;
+    bottom: revert;
+    padding: 93px 0 0 0;
+  }
+}
+@media only screen and (max-width: 42em) {
+  .main {
+    right: 0;
+    left: revert;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .main {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media only screen and (max-width: 36.25em) {
+  .main {
+    background-color: transparent;
+  }
+}
 
 .h1 {
   font-weight: 400;
@@ -94,6 +165,13 @@ select {
 .h1--down {
   color: #fff;
 }
+@media only screen and (max-width: 48em) {
+  .h1 {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 31px;
+  }
+}
 
 .p {
   color: #c2cbe5;
@@ -102,6 +180,11 @@ select {
   line-height: 28px;
   padding-right: 220px;
   margin-bottom: 40px;
+}
+@media only screen and (max-width: 48em) {
+  .p {
+    padding-right: 190px;
+  }
 }
 
 .form {
@@ -174,9 +257,15 @@ select {
 
 .header {
   margin-top: -28px;
-  margin-bottom: 103px;
   position: absolute;
   z-index: 3;
+}
+@media only screen and (max-width: 48em) {
+  .header {
+    margin-top: revert;
+    top: 50px;
+    left: 39px;
+  }
 }
 .header__logo {
   display: block;

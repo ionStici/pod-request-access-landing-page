@@ -15,6 +15,35 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    // 768px
+    @media only screen and (max-width: 48em) {
+        width: 635px;
+        height: 509px;
+        transform: revert;
+        left: 39px;
+        top: 258px;
+        bottom: revert;
+        padding: 93px 0 0 0;
+    }
+
+    // 672/16=42
+    @media only screen and (max-width: 42em) {
+        right: 0;
+        left: revert;
+    }
+
+    // 640/16=40
+    @media only screen and (max-width: 40em) {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    // 580/16=36.25
+    @media only screen and (max-width: 36.25em) {
+        background-color: transparent;
+    }
 }
 
 .h1 {
@@ -31,6 +60,12 @@
     &--down {
         color: #fff;
     }
+
+    @media only screen and (max-width: 48em) {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 31px;
+    }
 }
 
 .p {
@@ -40,6 +75,10 @@
     line-height: 28px;
     padding-right: 220px;
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 48em) {
+        padding-right: 190px;
+    }
 }
 
 .form {

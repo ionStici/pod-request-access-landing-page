@@ -1,9 +1,14 @@
 .header {
     margin-top: -28px;
-    margin-bottom: 103px;
 
     position: absolute;
     z-index: 3;
+
+    @media only screen and (max-width: 48em) {
+        margin-top: revert;
+        top: 50px;
+        left: 39px;
+    }
 
     &__logo {
         display: block;
